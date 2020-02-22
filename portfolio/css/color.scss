@@ -1,0 +1,78 @@
+$color-wt: rgb(255, 255, 255);
+$color-base: #6E542D;
+$color-clear: rgba(0, 27, 26, 0.192);
+$color-sub: #6A5656;
+$color-ax: #2A6B6D;
+
+body {
+    color: $color-ax;
+}
+
+#introduction,#skills,#services,#works,#contact {
+    background-color: $color-wt;
+}
+
+.container {
+    border-top: 1px solid $color-ax;
+}
+
+header,footer {
+    background-color: $color-base;
+    color: $color-wt;
+    a,#nav-drawer {
+        color: $color-wt;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: $color-ax;
+        }
+    }
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+    background: $color-wt;
+}
+
+#nav-close {
+    background: $color-base;
+}
+
+#nav-content {
+    background: $color-clear;
+}
+
+#nav-input:checked ~ #nav-content {
+    box-shadow: 1px 0 60px $color-wt;
+}
+
+#top {
+    color: $color-wt;
+    background: -webkit-linear-gradient(90deg, $color-clear 0%,rgba(59, 41, 1, 0.5) 100%),url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    .title {
+        background-color: $color-clear;
+        box-shadow: 0 0 1rem $color-sub;
+    }
+}
+
+#skills,#services {
+    .contents {
+        transition: border,transform 0.5s;
+        &:hover {
+            border: 1.5px solid $color-ax;
+            transform: scale(1.03);
+        }
+    }
+}
+
+#works {
+    p {
+        background-color: $color-ax;
+        color: $color-wt;
+    }
+}
+
+#submit-btn {
+    background-color: $color-ax;
+    color: $color-wt;
+}

@@ -1,0 +1,80 @@
+body {
+  color: #2A6B6D;
+}
+
+#introduction, #skills, #services, #works, #contact {
+  background-color: white;
+}
+
+.container {
+  border-top: 1px solid #2A6B6D;
+}
+
+header, footer {
+  background-color: #6E542D;
+  color: white;
+}
+
+header a, header #nav-drawer, footer a, footer #nav-drawer {
+  color: white;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hover {
+  background-color: #2A6B6D;
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  background: white;
+}
+
+#nav-close {
+  background: #6E542D;
+}
+
+#nav-content {
+  background: rgba(0, 27, 26, 0.192);
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-box-shadow: 1px 0 60px white;
+          box-shadow: 1px 0 60px white;
+}
+
+#top {
+  color: white;
+  background: -webkit-linear-gradient(90deg, rgba(0, 27, 26, 0.192) 0%, rgba(59, 41, 1, 0.5) 100%), url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#top .title {
+  background-color: rgba(0, 27, 26, 0.192);
+  -webkit-box-shadow: 0 0 1rem #6A5656;
+          box-shadow: 0 0 1rem #6A5656;
+}
+
+#skills .contents, #services .contents {
+  -webkit-transition: border,-webkit-transform 0.5s;
+  transition: border,-webkit-transform 0.5s;
+  transition: border,transform 0.5s;
+  transition: border,transform 0.5s,-webkit-transform 0.5s;
+}
+
+#skills .contents:hover, #services .contents:hover {
+  border: 1.5px solid #2A6B6D;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+#works p {
+  background-color: #2A6B6D;
+  color: white;
+}
+
+#submit-btn {
+  background-color: #2A6B6D;
+  color: white;
+}
+/*# sourceMappingURL=color.css.map */

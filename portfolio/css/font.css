@@ -1,0 +1,14 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6em;
+  font-family: 'Roboto','Noto Sans JP','ヒラギノ角ゴ Pro W3' sans-serif;
+}
+
+footer .fab {
+  font-size: 2rem;
+}
+/*# sourceMappingURL=font.css.map */
