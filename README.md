@@ -1,2 +1,3 @@
 # Portfolio
-My first portfoliio.
+Hello.
+This is my first portfoliio.
