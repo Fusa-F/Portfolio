@@ -47,6 +47,7 @@ header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hov
   background: -webkit-linear-gradient(90deg, rgba(0, 27, 26, 0.192) 0%, rgba(59, 41, 1, 0.5) 100%), url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 #top .title {
@@ -56,21 +57,50 @@ header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hov
 }
 
 #skills .contents, #services .contents {
-  -webkit-transition: border,-webkit-transform 0.5s;
-  transition: border,-webkit-transform 0.5s;
-  transition: border,transform 0.5s;
-  transition: border,transform 0.5s,-webkit-transform 0.5s;
+  -webkit-transition: all,-webkit-transform 0.5s;
+  transition: all,-webkit-transform 0.5s;
+  transition: all,transform 0.5s;
+  transition: all,transform 0.5s,-webkit-transform 0.5s;
 }
 
 #skills .contents:hover, #services .contents:hover {
   border: 1.5px solid #2A6B6D;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+  color: white;
+}
+
+#skills .contents::before, #services .contents::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: #2A6B6D;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#skills .contents:hover::before, #services .contents:hover::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 #works p {
   background-color: #2A6B6D;
   color: white;
+}
+
+input:focus, textarea:focus {
+  background: rgba(0, 27, 26, 0.192);
 }
 
 #submit-btn {
