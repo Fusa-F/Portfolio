@@ -242,7 +242,7 @@ header .header-menu {
 #top .title {
   width: 50rem;
   max-width: 100%;
-  margin: 5rem auto;
+  margin: 8rem auto;
   padding: 10rem;
   border-radius: 0.5rem;
 }
@@ -266,10 +266,8 @@ header .header-menu {
 
 @media (max-width: 480px) {
   #top .title {
-    width: 10rem;
-    padding: 6rem;
-    margin-top: 15rem;
-    text-align: start;
+    width: 100%;
+    padding: 10rem 0;
   }
 }
 
@@ -289,12 +287,6 @@ header .header-menu {
   }
 }
 
-@media (max-width: 480px) {
-  #top .title h1 {
-    font-size: 2rem;
-  }
-}
-
 #introduction .container {
   padding: 12rem 10rem;
 }
@@ -309,6 +301,12 @@ header .header-menu {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  #introduction .container {
+    padding: 12rem 3rem;
   }
 }
 
@@ -439,6 +437,14 @@ header .header-menu {
   width: 100%;
   height: auto;
   margin: 0;
+}
+
+.background {
+  min-height: 80vh;
+  background-image: url("../portfolio-img/alexander-andrews-JYGnB9gTCls-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 #contact .container {

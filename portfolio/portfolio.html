@@ -11,7 +11,7 @@
     <title>PORTFOLIO</title>
 </head>
 <body>
-    <div id="page">
+    <div id="page" ontouchstart="">
         <header>
             <div class="header-inner">
                 <a href="#top" class="top-btn">TOP</a>
@@ -174,16 +174,18 @@
                 </ul>
             </div>
         </section>
+        <div class="background">
+        </div>
         <section id="contact">
             <div class="inner fadein">
                 <div class="section-title"><h2>-CONTACT-</h2></div>
                 <form action="#" method="#" class="container column">
                     <label for="name">NAME:</label>
-                    <input type="text" id="name" placeholder="氏名:">
+                    <input type="text" id="name" placeholder="氏名:" required>
                     <label for="mail">E-mail:</label>
-                    <input type="email" id="mail" placeholder="メールアドレス:">
+                    <input type="email" id="mail" placeholder="メールアドレス:" required>
                     <label for="msg">MESSAGE:</label>
-                    <textarea id="msg" cols="30" rows="10" placeholder="ご用件:"></textarea>
+                    <textarea id="msg" cols="30" rows="10" placeholder="ご用件:" required></textarea>
                     <input type="button" value="SUBMIT" id="submit-btn">
                 </form>
             </div>

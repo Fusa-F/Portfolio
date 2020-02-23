@@ -212,7 +212,7 @@ header {
     .title {
         width: 50rem;
         max-width: 100%;
-        margin: 5rem auto;
+        margin: 8rem auto;
         padding: 10rem;
         border-radius: 0.5rem;
         &:hover {
@@ -225,10 +225,8 @@ header {
             width: 20rem;
         }
         @include sp {
-            width: 10rem;
-            padding: 6rem;
-            margin-top: 15rem;
-            text-align: start;
+            width: 100%;
+            padding: 10rem 0;
         }
         h1 {
             font-size: 8rem;
@@ -237,9 +235,6 @@ header {
             }
             @include tab {
                 font-size: 4rem;
-            }
-            @include sp {
-                font-size: 2rem;
             }
         }
     }
@@ -252,6 +247,9 @@ header {
             flex-direction: column;
             justify-content: center;
             text-align: center;
+        }
+        @include tab {
+            padding: 12rem 3rem;
         }
     }
     img {
@@ -348,6 +346,14 @@ header {
             }
         }    
     }
+}
+
+.background {
+    min-height: 80vh;
+    background-image: url("../portfolio-img/alexander-andrews-JYGnB9gTCls-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #contact {

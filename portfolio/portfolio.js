@@ -44,10 +44,12 @@ $(function(){
     $('.slider').slick({
         dots: true, //ページャーを表示（スライダー下の黒い丸）
         centerMode: true, //要素を中央寄せにする
-        centerPadding: '150px', //両サイドの見えている部分のサイズ
+        centerPadding: '10%', //両サイドの見えている部分のサイズ
         autoplay: true, //自動で画像を切り替える
         autoplaySpeed: 3000, //自動で画像が切り替えられるまでの時間 1000 = 1秒
         speed: 1500,
+        adaptiveHeight: true,
+        swipeToSlide: true,
         responsive: [
             {breakpoint: 701,
                 settings: {
