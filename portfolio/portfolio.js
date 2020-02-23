@@ -30,16 +30,16 @@ $(function(){
                 $(this).css('transform','translateY(0)');
             }
         });
-    });
 
-    $('#submit-btn').hover(
-        function(){
-            $(this).val('送信');
-        },
-        function(){
-            $(this).val('SUBMIT');
-        }
-    );
+        $('').each(function(){
+            var target = $(this).offset().top;
+            var sc = $(window).scrollTop();
+            var winHet = $(window).height();
+            if(sc > target - winHet ){
+
+            }
+        });
+    });
 
     $('.slider').slick({
         dots: true, //ページャーを表示（スライダー下の黒い丸）

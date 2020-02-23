@@ -44,10 +44,6 @@ header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hov
 
 #top {
   color: white;
-  background: -webkit-linear-gradient(90deg, rgba(0, 27, 26, 0.192) 0%, rgba(59, 41, 1, 0.5) 100%), url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 #top .title {

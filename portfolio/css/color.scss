@@ -46,10 +46,6 @@ header,footer {
 
 #top {
     color: $color-wt;
-    background: -webkit-linear-gradient(90deg, $color-clear 0%,rgba(59, 41, 1, 0.5) 100%),url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     .title {
         background-color: $color-clear;
         box-shadow: 0 0 1rem $color-sub;
