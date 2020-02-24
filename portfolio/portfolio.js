@@ -41,8 +41,8 @@ $(function(){
                 $('#top').removeClass('bg-none');
                 $('.background').addClass('bg-none');
             }else {
-                $('#top').removeClass('bg-none');
-                $('.background').removeClass('bg-none');
+                $('#top').addClass('bg-none');
+                $('.background').addClass('bg-none');
             }
         });
     });
