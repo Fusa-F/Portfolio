@@ -37,10 +37,16 @@ $(function(){
             if(sc >= target){
                 $('#top').addClass('bg-none');
                 $('.background').removeClass('bg-none');
-            }else if(sc < target) {
+            }else{
                 $('#top').removeClass('bg-none');
                 $('.background').addClass('bg-none');
-            }else {
+            }
+        });
+
+        $('footer').each(function(){
+            var target =$(this).offset().bottom;
+            var height =$('body').height();
+            if(target >= height){
                 $('#top').addClass('bg-none');
                 $('.background').addClass('bg-none');
             }
