@@ -457,6 +457,7 @@ header .header-menu {
 .background:before {
   content: "";
   display: block;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -464,6 +465,10 @@ header .header-menu {
   height: 100vh;
   background: url("../portfolio-img/alexander-andrews-JYGnB9gTCls-unsplash.jpg") center no-repeat;
   background-size: cover;
+}
+
+.bg-none:before {
+  display: none;
 }
 
 #contact .container {
@@ -502,28 +507,6 @@ footer a {
 
 footer p {
   padding-top: 2rem;
-}
-
-@-webkit-keyframes huerotator {
-  0% {
-    -webkit-filter: hue-rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    -webkit-filter: hue-rotate(90deg);
-    filter: hue-rotate(90deg);
-  }
-}
-
-@keyframes huerotator {
-  0% {
-    -webkit-filter: hue-rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    -webkit-filter: hue-rotate(90deg);
-    filter: hue-rotate(90deg);
-  }
 }
 
 @-webkit-keyframes rotator {

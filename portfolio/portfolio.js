@@ -2,7 +2,7 @@ $(function(){
     var speed=800;
 
     $('.top-btn').click(function() {     
-        $('html, body').animate({scrollTop:0},speed);     
+        $('html, body').animate({scrollTop:0},speed); 
     });
     $('.intro-btn').click(function() {     
         $('html, body').animate({scrollTop:$('#introduction').offset().top-40},speed);     
@@ -25,18 +25,24 @@ $(function(){
             var targetElement = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 200){
+            if (scroll > targetElement - windowHeight +200){
                 $(this).css('opacity','1');
                 $(this).css('transform','translateY(0)');
             }
         });
 
-        $('').each(function(){
+        $('#services').each(function(){
             var target = $(this).offset().top;
             var sc = $(window).scrollTop();
-            var winHet = $(window).height();
-            if(sc > target - winHet ){
-
+            if(sc >= target){
+                $('#top').addClass('bg-none');
+                $('.background').removeClass('bg-none');
+            }else if(sc < target) {
+                $('#top').removeClass('bg-none');
+                $('.background').addClass('bg-none');
+            }else {
+                $('#top').removeClass('bg-none');
+                $('.background').removeClass('bg-none');
             }
         });
     });
