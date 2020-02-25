@@ -89,6 +89,14 @@
      object-fit: cover;
 }
 
+.fadein, .section-title {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
 header {
   width: 100%;
   max-width: 100%;
@@ -232,22 +240,26 @@ header .header-menu {
 }
 
 #top {
-  text-align: center;
+  text-align: start;
   height: 80rem;
   padding-top: 10rem;
 }
 
 #top .title {
-  width: 50rem;
+  width: 60rem;
   max-width: 100%;
-  margin: 8rem auto;
+  margin: 4rem auto;
   padding: 10rem;
   border-radius: 0.5rem;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
 }
 
 #top .title:hover {
-  -webkit-animation: rotator 1s;
-          animation: rotator 1s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 1000px) {
@@ -271,6 +283,7 @@ header .header-menu {
 
 #top .title h1 {
   font-size: 8rem;
+  padding-left: 3rem;
 }
 
 @media (max-width: 1000px) {
@@ -285,6 +298,12 @@ header .header-menu {
   }
 }
 
+#top .down-arrows {
+  font-size: 5rem;
+  -webkit-animation: fuwa 2s infinite ease;
+  animation: fuwa 2s infinite ease;
+}
+
 #top:before {
   content: "";
   display: block;
@@ -296,6 +315,8 @@ header .header-menu {
   height: 100%;
   background: url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg") center no-repeat;
   background-size: cover;
+  -webkit-animation: bg-animation 7s linear;
+  animation: bg-animation 15s linear;
 }
 
 #introduction .container {
@@ -347,6 +368,7 @@ header .header-menu {
 
 #introduction .intro-profile h3 {
   font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 #skills .container {
@@ -483,7 +505,7 @@ header .header-menu {
 
 @media (max-width: 700px) {
   #contact .container {
-    padding: 12rem 5rem;
+    padding: 8rem 5rem;
   }
 }
 
@@ -509,33 +531,54 @@ footer p {
   padding-top: 2rem;
 }
 
-@-webkit-keyframes rotator {
+@keyframes fuwa {
   0% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
   }
   100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes rotator {
+@-webkit-keyframes fuwa {
   0% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
   }
   100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-.fadein, .section-title {
-  opacity: 0;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  -webkit-transition: all 2s;
-  transition: all 2s;
+@keyframes bg-animation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

@@ -19,6 +19,7 @@ body {
 header,footer {
     background-color: $color-base;
     color: $color-wt;
+    transition: background-color 1s;
     a,#nav-drawer {
         color: $color-wt;
         transition: background-color 0.3s;
@@ -26,6 +27,10 @@ header,footer {
             background-color: $color-ax;
         }
     }
+}
+
+.change-back-color {
+    background-color: $color-clear;
 }
 
 #nav-open span, #nav-open span:before, #nav-open span:after {

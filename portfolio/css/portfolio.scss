@@ -89,6 +89,12 @@ $sp: 480px;  // スマホ
     }
 }
 
+.fadein,.section-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2s;
+}
+
 header {
     width: 100%;
     max-width: 100%;
@@ -205,17 +211,18 @@ header {
 }
 
 #top {
-    text-align: center;
+    text-align: start;
     height: 80rem;
     padding-top: 10rem;
     .title {
-        width: 50rem;
+        width: 60rem;
         max-width: 100%;
-        margin: 8rem auto;
+        margin: 4rem auto;
         padding: 10rem;
         border-radius: 0.5rem;
+        transition: transform 2s ease;
         &:hover {
-            animation: rotator 1s;
+            transform: scale(1.1);
         }
         @include pc {
             width: 40rem;
@@ -229,6 +236,7 @@ header {
         }
         h1 {
             font-size: 8rem;
+            padding-left: 3rem;
             @include pc {
                 font-size: 6rem;
             }
@@ -236,6 +244,11 @@ header {
                 font-size: 4rem;
             }
         }
+    }
+    .down-arrows {
+        font-size: 5rem;
+        -webkit-animation: fuwa 2s infinite ease;
+        animation: fuwa 2s infinite ease;
     }
 }
 #top:before{
@@ -249,6 +262,8 @@ header {
     height:100%;
     background:url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg") center no-repeat;
     background-size:cover;
+    -webkit-animation: bg-animation 7s linear;
+    animation: bg-animation 15s linear;
 }
 
 #introduction {
@@ -280,6 +295,7 @@ header {
         }
         h3 {
             font-size: 3rem;
+            margin-bottom: 2rem;
         }
     }
 }
@@ -386,7 +402,7 @@ header {
             padding: 12rem 10rem;
         }
         @include tab {
-            padding: 12rem 5rem;
+            padding: 8rem 5rem;
         }
         label {
             margin-top: 1rem;
@@ -409,18 +425,55 @@ footer {
     }  
 }
 
-@keyframes rotator {
+
+@keyframes fuwa {
     0% {
-        transform: rotateY(0deg);
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
     }
 
     100% {
-        transform: rotateY(360deg);
+        transform: translateY(0);
     }
 }
 
-.fadein,.section-title {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 2s;
+@-webkit-keyframes fuwa {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bg-animation {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bg-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./css/portfolio.css" type="text/css">
     <script src="./jquery-3.4.1.min.js"></script>
+    <script src="t.js-master/t.min.js"></script>
     <script src="slick/slick.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
     <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Roboto:400,700&display=swap&subset=japanese" rel="stylesheet">
-    <title>PORTFOLIO</title>
+    <title>F.F's Portfolio</title>
 </head>
 <body>
     <div id="page" ontouchstart="">
@@ -43,7 +48,10 @@
         <section id="top">
             <div class="inner fadein">
                 <div class="title">
-                    <h1>MY<br>PORTFOLIO</h1>
+                    <h1 class="effect">Welcome to<br><del>Fusa Fukushi's</del>F.F's<br>Portfolio</h1>
+                </div>
+                <div class="down-arrows center">
+                    <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </section>
@@ -55,8 +63,9 @@
                         <img src="./portfolio-img/laughingman.jpg" alt="my-icon">
                     </div>
                     <div class="intro-profile">
-                        <h3>FUSA</h3>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        <h3>FUSA FUKUSHI</h3>
+                        <p>情報系公立大学2年<br>
+                            デザインや表現することが得意です</p>
                     </div>
                 </div>
             </div>
@@ -69,6 +78,13 @@
                         <h3>Java</h3>
                         <div class="rogo-box">
                             <i class="fab fa-java"></i>
+                        </div>
+                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </div>
+                    <div class="contents center">
+                        <h3>Unity</h3>
+                        <div class="rogo-box">
+                            <i class="fab fa-unity"></i>
                         </div>
                         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     </div>
@@ -90,13 +106,6 @@
                         <h3>PHP</h3>
                         <div class="rogo-box">
                             <i class="fab fa-php"></i>
-                        </div>
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    </div>
-                    <div class="contents center">
-                        <h3>WordPress</h3>
-                        <div class="rogo-box">
-                            <i class="fab fa-wordpress-simple"></i>
                         </div>
                         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     </div>
@@ -159,18 +168,9 @@
             <div class="inner fadein">
                 <div class="section-title"><h2>-WORKS-</h2></div>
                 <ul class="container slider">
-                    <li class="img-box">
+                    <a class="img-box" href="./portfolio-img/-RESERVATION APP- - Google Chrome 2020_02_14 20_52_08 (2).png" data-lightbox="works-img" data-title="宿泊予約サービス">
                         <img src="./portfolio-img/-RESERVATION APP- - Google Chrome 2020_02_14 20_52_08 (2).png" alt="work-pic">
-                    </li>
-                    <li class="img-box">
-                        <img src="./portfolio-img/-RESERVATION APP- - Google Chrome 2020_02_14 20_52_08 (2).png" alt="work-pic">
-                    </li>
-                    <li class="img-box">
-                        <img src="./portfolio-img/-RESERVATION APP- - Google Chrome 2020_02_14 20_52_08 (2).png" alt="work-pic">
-                    </li>
-                    <li class="img-box">
-                        <img src="./portfolio-img/-RESERVATION APP- - Google Chrome 2020_02_14 20_52_08 (2).png" alt="work-pic">
-                    </li>
+                    </a>
                 </ul>
             </div>
         </section>
@@ -197,7 +197,7 @@
                         <a href="https://twitter.com/fusa_prog" id="twitter-btn" target="_blank"><i class="fab fa-twitter-square"></i></a>
                         <a href="#footer" id="google-btn"><i class="fab fa-google"></i></a>
                     </div>
-                    <p>Copyright © 2020 Fusa Fukushi All Rights Reserved.</h4>
+                    <p>Copyright © 2020 Fusa Fukushi All Rights Reserved.</<span>
                 </div>
             </div>
         </footer>

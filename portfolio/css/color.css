@@ -13,6 +13,8 @@ body {
 header, footer {
   background-color: #6E542D;
   color: white;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 header a, header #nav-drawer, footer a, footer #nav-drawer {
@@ -23,6 +25,10 @@ header a, header #nav-drawer, footer a, footer #nav-drawer {
 
 header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hover {
   background-color: #2A6B6D;
+}
+
+.change-back-color {
+  background-color: rgba(0, 27, 26, 0.192);
 }
 
 #nav-open span, #nav-open span:before, #nav-open span:after {
