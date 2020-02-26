@@ -1,38 +1,66 @@
 $(function(){
-    var speed=800;
-    var windowHeight = $(window).height();
-
-    $('.effect').t({
-        speed: 100,               // 文字の表示スピード。タイピングのスピード。
-        speed_vary: true,         // 「true」にすると人間が入力しているかのように文字ごとのスピード。
-        delay: 1,                 // 開始時間。
-        locale: 'en',             // キーボードのレイアウト「en」か「de」から選択。
-        caret: true,     //カーソルの表示非表示、若しくはカーソル自体の指定。
-        blink: true,             // カーソルを点滅させるかどうか。
-    });
+    var contents = ['#top','#introduction','#skills','#services','#works','#contact','footer'];
+    var btn = ['.top-btn','.intro-btn','.skill-btn','.ser-btn','.works-btn','.cont-btn'];
+    var i=0;
     
-    $('.top-btn').click(function() {     
-        $('html, body').animate({scrollTop:0},speed); 
+    function btnEvent(object){
+        var speed = 800;
+        var num = 56;
+        $('html,body').animate({scrollTop: $(object).offset().top - num},speed);
+    }
+    $(btn[0]).click(function() {  
+        btnEvent(contents[0]);     
     });
-    $('.intro-btn').click(function() {     
-        $('html, body').animate({scrollTop:$('#introduction').offset().top-56},speed);     
+    $(btn[1]).click(function() {   
+        btnEvent(contents[1]);  
     });
-    $('.skill-btn').click(function() {     
-        $('html, body').animate({scrollTop:$('#skills').offset().top-56},speed);     
+    $(btn[2]).click(function() {
+        btnEvent(contents[2]);  
     });
-    $('.ser-btn').click(function() {     
-        $('html, body').animate({scrollTop:$('#services').offset().top-56},speed);     
+    $(btn[3]).click(function() {
+        btnEvent(contents[3]);       
     });
-    $('.works-btn').click(function() {     
-        $('html, body').animate({scrollTop:$('#works').offset().top-56},speed);     
+    $(btn[4]).click(function() { 
+        btnEvent(contents[4]);      
     });
-    $('.cont-btn').click(function() {     
-        $('html, body').animate({scrollTop:$('#contact').offset().top-56},speed);     
+    $(btn[5]).click(function() {
+        btnEvent(contents[5]);  
     });
 
     $(window).scroll(function (){
         var scroll = $(window).scrollTop();
+        var target = $(contents[i]).offset().top -70;
+        var docHeight = $(document).innerHeight();
+        var windowHeight = $(window).innerHeight();
+        var pageBottom = docHeight - windowHeight;    
 
+        if(scroll >= target){
+            $(btn[i]).addClass('change-btn-color');
+            if(i<contents.length-1){
+                i++;
+            }
+            if(i>0){
+                $(btn[0]).removeClass('change-btn-color');
+            }
+            if(i>=2){
+                $('.header-inner').addClass('change-back-color');
+            }else {
+                $('.header-inner').removeClass('change-back-color');
+            }
+            if(i>=3){
+                $('#top').addClass('bg-none');
+                $('.background').removeClass('bg-none');
+            }else {
+                $('#top').removeClass('bg-none');
+                $('.background').addClass('bg-none');
+            }
+        }
+
+        if(scroll < target || pageBottom <= scroll){
+            $(btn[i]).removeClass('change-btn-color');
+            i--;
+        }
+        
         $('.fadein,.section-title').each(function(){
             var targetElement = $(this).offset().top;
             if (scroll > targetElement - windowHeight +200){
@@ -40,26 +68,15 @@ $(function(){
                 $(this).css('transform','translateY(0)');
             }
         });
+    });
 
-        $('#services').each(function(){
-            var target = $(this).offset().top;
-            if(scroll >= target){
-                $('#top').addClass('bg-none');
-                $('.background').removeClass('bg-none');
-            }else{
-                $('#top').removeClass('bg-none');
-                $('.background').addClass('bg-none');
-            }
-        });
-
-        $('#introduction').each(function(){
-            var thisOffset = $(this).offset().top -windowHeight  + $(this).outerHeight();
-            if( scroll + windowHeight > thisOffset){
-                $('header').addClass('change-back-color');
-            } else {
-                $('header').removeClass('change-back-color');
-            }
-        });
+    $('.effect').t({
+        speed: 10,               // 文字の表示スピード。タイピングのスピード。
+        speed_vary: true,         // 「true」にすると人間が入力しているかのように文字ごとのスピード。
+        delay: 0.3,                 // 開始時間。
+        locale: 'en',             // キーボードのレイアウト「en」か「de」から選択。
+        caret: true,     //カーソルの表示非表示、若しくはカーソル自体の指定。
+        blink: false,             // カーソルを点滅させるかどうか。
     });
 
     $('.slider').slick({
@@ -73,12 +90,10 @@ $(function(){
         responsive: [
             {breakpoint: 701,
                 settings: {
-                    centerPadding: '80px',
                 }
             },
             {breakpoint: 501,
                 settings: {
-                    centerPadding: 0,
                 }
             }
         ]

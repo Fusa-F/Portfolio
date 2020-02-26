@@ -1,5 +1,5 @@
 $color-wt: rgb(255, 255, 255);
-$color-base: #6E542D;
+$color-base: rgba(168, 102, 2, 0.432);
 $color-clear: rgba(0, 27, 26, 0.192);
 $color-sub: #6A5656;
 $color-ax: #2A6B6D;
@@ -8,15 +8,19 @@ body {
     color: $color-ax;
 }
 
-#introduction,#skills,#services,#works,#contact {
+#introduction,#skills,#services,#works {
     background-color: $color-wt;
+}
+
+#contact {
+    background-color: $color-clear;
 }
 
 .container {
     border-top: 1px solid $color-ax;
 }
 
-header,footer {
+.header-inner,footer {
     background-color: $color-base;
     color: $color-wt;
     transition: background-color 1s;
@@ -28,9 +32,24 @@ header,footer {
         }
     }
 }
+.top-btn {
+    opacity: 0.5;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 1;
+    }
+}
 
 .change-back-color {
     background-color: $color-clear;
+}
+
+.change-btn-color {
+    background-color: $color-clear;
+}
+
+.t-caret {
+    color: $color-clear;
 }
 
 #nav-open span, #nav-open span:before, #nav-open span:after {
@@ -54,6 +73,12 @@ header,footer {
     .title {
         background-color: $color-clear;
         box-shadow: 0 0 1rem $color-sub;
+    }
+}
+
+#introduction {
+    .name {
+        border-bottom: 1px solid $color-ax;
     }
 }
 
@@ -91,11 +116,22 @@ header,footer {
     }
 }
 
-input:focus, textarea:focus {
-    background: $color-clear;
-}
-
-#submit-btn {
-    background-color: $color-ax;
+#contact {
     color: $color-wt;
+    input,textarea {
+        background-color: $color-clear;
+    }
+    
+    input:focus, textarea:focus {
+        background: $color-wt;
+    }
+    
+    ::placeholder {
+        color: $color-wt;
+    }
+    
+    #submit-btn {
+        background-color: $color-ax;
+        color: $color-wt;
+    }
 }

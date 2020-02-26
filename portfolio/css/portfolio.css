@@ -16,9 +16,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .inner {
@@ -84,6 +84,10 @@
   text-align: center;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .img-box img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -137,6 +141,26 @@ header .menu {
 @media (max-width: 1000px) {
   header .menu {
     display: none;
+  }
+}
+
+header .top-btn {
+  position: fixed;
+  bottom: 5rem;
+  right: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+header .top-btn img {
+  width: 5rem;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  header .top-btn {
+    bottom: 3rem;
+    right: 3rem;
   }
 }
 
@@ -198,18 +222,24 @@ header #nav-close {
 }
 
 header #nav-content {
+  text-align: end;
   overflow: auto;
   position: fixed;
-  top: 0;
+  top: -10%;
   right: 0;
   z-index: 9999;
-  width: 90%;
-  max-width: 200px;
-  height: 100%;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  width: 60rem;
+  max-width: 100%;
+  height: auto;
+  border-bottom-left-radius: 100%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
   -webkit-transform: translateX(105%);
-  transform: translateX(105%);
+  transform: translate(105%, -100%);
+}
+
+header #nav-content ul {
+  padding: 5rem 0 7rem 15rem;
 }
 
 header #nav-input:checked ~ #nav-close {
@@ -218,8 +248,8 @@ header #nav-input:checked ~ #nav-close {
 }
 
 header #nav-input:checked ~ #nav-content {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
+  -webkit-transform: translateX(30%);
+  transform: translate(0%, 5%);
 }
 
 header .header-menu {
@@ -246,38 +276,24 @@ header .header-menu {
 }
 
 #top .title {
-  width: 60rem;
+  width: 110rem;
   max-width: 100%;
   margin: 4rem auto;
-  padding: 10rem;
+  padding: 6rem 3rem;
   border-radius: 0.5rem;
-  -webkit-transition: -webkit-transform 2s ease;
-  transition: -webkit-transform 2s ease;
-  transition: transform 2s ease;
-  transition: transform 2s ease, -webkit-transform 2s ease;
-}
-
-#top .title:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 @media (max-width: 1000px) {
   #top .title {
-    width: 40rem;
-  }
-}
-
-@media (max-width: 700px) {
-  #top .title {
-    width: 20rem;
+    width: 60rem;
   }
 }
 
 @media (max-width: 480px) {
   #top .title {
     width: 100%;
-    padding: 10rem 0;
+    padding: 6rem 0;
+    line-height: 8rem;
   }
 }
 
@@ -313,10 +329,8 @@ header .header-menu {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: url("../portfolio-img/allie-smith-I3nD16F56Ko-unsplash.jpg") center no-repeat;
+  background: url("../portfolio-img/edrece-stansberry-qGi-RZm6kCk-unsplash (1).jpg") center no-repeat;
   background-size: cover;
-  -webkit-animation: bg-animation 7s linear;
-  animation: bg-animation 15s linear;
 }
 
 #introduction .container {
@@ -344,8 +358,8 @@ header .header-menu {
 
 #introduction img {
   border-radius: 50%;
-  width: 30rem;
-  height: 30rem;
+  width: 40rem;
+  height: 40rem;
 }
 
 @media (max-width: 700px) {
@@ -366,9 +380,12 @@ header .header-menu {
   }
 }
 
-#introduction .intro-profile h3 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+#introduction .intro-profile .name {
+  margin: 2rem 0;
+}
+
+#introduction .intro-profile .name span {
+  font-size: 2.5rem;
 }
 
 #skills .container {
@@ -438,9 +455,9 @@ header .header-menu {
 
 #services .contents img {
   max-width: 100%;
-  width: 300rem;
-  height: 35rem;
-  padding-left: 2rem;
+  width: 100rem;
+  height: 25rem;
+  border-radius: 30rem;
 }
 
 @media (max-width: 1000px) {
@@ -450,16 +467,22 @@ header .header-menu {
   }
 }
 
+@media (max-width: 480px) {
+  #services .contents img {
+    border-radius: 50%;
+  }
+}
+
 #services .contents .txt {
   padding: 4rem 2rem;
 }
 
 #services .contents .txt h3 {
-  padding-left: 3rem;
+  padding-left: 2rem;
 }
 
 #services .contents .txt p {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 #works .slider {
@@ -473,7 +496,7 @@ header .header-menu {
 }
 
 .background {
-  height: 80vh;
+  height: 40vh;
 }
 
 .background:before {
@@ -485,7 +508,7 @@ header .header-menu {
   z-index: -1;
   width: 100%;
   height: 100vh;
-  background: url("../portfolio-img/alexander-andrews-JYGnB9gTCls-unsplash.jpg") center no-repeat;
+  background: url("../portfolio-img/antonio-lainez-97_u1LDOLx0-unsplash (1).jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -531,6 +554,10 @@ footer p {
   padding-top: 2rem;
 }
 
+footer #google-btn {
+  display: none;
+}
+
 @keyframes fuwa {
   0% {
     -webkit-transform: translateY(0);
@@ -558,27 +585,6 @@ footer p {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-}
-
-@keyframes bg-animation {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes bg-animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */

@@ -2,33 +2,55 @@ body {
   color: #2A6B6D;
 }
 
-#introduction, #skills, #services, #works, #contact {
+#introduction, #skills, #services, #works {
   background-color: white;
+}
+
+#contact {
+  background-color: rgba(0, 27, 26, 0.192);
 }
 
 .container {
   border-top: 1px solid #2A6B6D;
 }
 
-header, footer {
-  background-color: #6E542D;
+.header-inner, footer {
+  background-color: rgba(168, 102, 2, 0.432);
   color: white;
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
 }
 
-header a, header #nav-drawer, footer a, footer #nav-drawer {
+.header-inner a, .header-inner #nav-drawer, footer a, footer #nav-drawer {
   color: white;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
-header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hover {
+.header-inner a:hover, .header-inner #nav-drawer:hover, footer a:hover, footer #nav-drawer:hover {
   background-color: #2A6B6D;
+}
+
+.top-btn {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.top-btn:hover {
+  opacity: 1;
 }
 
 .change-back-color {
   background-color: rgba(0, 27, 26, 0.192);
+}
+
+.change-btn-color {
+  background-color: rgba(0, 27, 26, 0.192);
+}
+
+.t-caret {
+  color: rgba(0, 27, 26, 0.192);
 }
 
 #nav-open span, #nav-open span:before, #nav-open span:after {
@@ -36,7 +58,7 @@ header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hov
 }
 
 #nav-close {
-  background: #6E542D;
+  background: rgba(168, 102, 2, 0.432);
 }
 
 #nav-content {
@@ -56,6 +78,10 @@ header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hov
   background-color: rgba(0, 27, 26, 0.192);
   -webkit-box-shadow: 0 0 1rem #6A5656;
           box-shadow: 0 0 1rem #6A5656;
+}
+
+#introduction .name {
+  border-bottom: 1px solid #2A6B6D;
 }
 
 #skills .contents, #services .contents {
@@ -101,11 +127,35 @@ header a:hover, header #nav-drawer:hover, footer a:hover, footer #nav-drawer:hov
   color: white;
 }
 
-input:focus, textarea:focus {
-  background: rgba(0, 27, 26, 0.192);
+#contact {
+  color: white;
 }
 
-#submit-btn {
+#contact input, #contact textarea {
+  background-color: rgba(0, 27, 26, 0.192);
+}
+
+#contact input:focus, #contact textarea:focus {
+  background: white;
+}
+
+#contact ::-webkit-input-placeholder {
+  color: white;
+}
+
+#contact :-ms-input-placeholder {
+  color: white;
+}
+
+#contact ::-ms-input-placeholder {
+  color: white;
+}
+
+#contact ::placeholder {
+  color: white;
+}
+
+#contact #submit-btn {
   background-color: #2A6B6D;
   color: white;
 }
