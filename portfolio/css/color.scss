@@ -72,7 +72,6 @@ body {
     color: $color-wt;
     .title {
         background-color: $color-clear;
-        box-shadow: 0 0 1rem $color-sub;
     }
 }
 
@@ -82,13 +81,15 @@ body {
     }
 }
 
-#skills,#services {
+#skills {
+    background-color: $color-clear;
+    color: $color-wt;
     .contents {
+        position: relative;
         transition: all,transform 0.5s;
         &:hover {
             border: 1.5px solid $color-ax;
             transform: scale(1.03);
-            color: $color-wt;
         }
     }
     .contents::before {
@@ -99,12 +100,60 @@ body {
         left: 0;
         z-index: -1;
         content: '';
-        background: $color-ax;
+        background: $color-clear;
         transform-origin: center center;
         transform: scale(1, 0);
         transition: transform .3s;
     }
     .contents:hover::before {
+        transform: scale(1, 1);
+    }
+}
+
+#services {
+    .img-box {
+        position: relative;
+        &:hover .txt {
+            display: block;
+        }
+        .txt {
+            color: $color-wt;
+            z-index: 2;
+        }
+    }
+    .img-box::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 30rem;
+        content: '';
+        background: $color-clear;
+        transform-origin: center center;
+        transform: scale(0, 0);
+        transition: all 0.5s ease;
+    }
+    .img-box:hover::before {
+        transform: scale(1.5, 1.5);
+        border: 2px solid $color-wt;
+    }
+    .img-box::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 30rem;
+        content: '';
+        background: $color-ax;
+        transform-origin: center center;
+        transform: scale(0, 0);
+        transition: all 0.3s ease;
+    }
+    .img-box:hover::after {
         transform: scale(1, 1);
     }
 }

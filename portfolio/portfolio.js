@@ -47,12 +47,18 @@ $(function(){
             }else {
                 $('.header-inner').removeClass('change-back-color');
             }
-            if(i>=3){
-                $('#top').addClass('bg-none');
-                $('.background').removeClass('bg-none');
+            if(i<=1){
+                $('.background').removeClass('bg-show');
+                $('.backgroundSec').removeClass('bg-show');
+            }else if(i>=2 && i<4){
+                $('.background').addClass('bg-show');
+                $('.backgroundSec').removeClass('bg-show');
+            }else if(i>=4){
+                $('.background').removeClass('bg-show');
+                $('.backgroundSec').addClass('bg-show');
             }else {
-                $('#top').removeClass('bg-none');
-                $('.background').addClass('bg-none');
+                $('.background').removeClass('bg-show');
+                $('.backgroundSec').removeClass('bg-show');
             }
         }
 

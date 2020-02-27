@@ -76,29 +76,32 @@ body {
 
 #top .title {
   background-color: rgba(0, 27, 26, 0.192);
-  -webkit-box-shadow: 0 0 1rem #6A5656;
-          box-shadow: 0 0 1rem #6A5656;
 }
 
 #introduction .name {
   border-bottom: 1px solid #2A6B6D;
 }
 
-#skills .contents, #services .contents {
+#skills {
+  background-color: rgba(0, 27, 26, 0.192);
+  color: white;
+}
+
+#skills .contents {
+  position: relative;
   -webkit-transition: all,-webkit-transform 0.5s;
   transition: all,-webkit-transform 0.5s;
   transition: all,transform 0.5s;
   transition: all,transform 0.5s,-webkit-transform 0.5s;
 }
 
-#skills .contents:hover, #services .contents:hover {
+#skills .contents:hover {
   border: 1.5px solid #2A6B6D;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
-  color: white;
 }
 
-#skills .contents::before, #services .contents::before {
+#skills .contents::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -106,7 +109,7 @@ body {
   left: 0;
   z-index: -1;
   content: '';
-  background: #2A6B6D;
+  background: rgba(0, 27, 26, 0.192);
   -webkit-transform-origin: center center;
           transform-origin: center center;
   -webkit-transform: scale(1, 0);
@@ -117,7 +120,67 @@ body {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-#skills .contents:hover::before, #services .contents:hover::before {
+#skills .contents:hover::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+#services .img-box {
+  position: relative;
+}
+
+#services .img-box:hover .txt {
+  display: block;
+}
+
+#services .img-box .txt {
+  color: white;
+  z-index: 2;
+}
+
+#services .img-box::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 30rem;
+  content: '';
+  background: rgba(0, 27, 26, 0.192);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#services .img-box:hover::before {
+  -webkit-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+  border: 2px solid white;
+}
+
+#services .img-box::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 30rem;
+  content: '';
+  background: #2A6B6D;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#services .img-box:hover::after {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
