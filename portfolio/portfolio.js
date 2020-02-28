@@ -64,7 +64,9 @@ $(function(){
 
         if(scroll < target || pageBottom <= scroll){
             $(btn[i]).removeClass('change-btn-color');
-            i--;
+            if(i>0){
+                i--;
+            }
         }
         
         $('.fadein,.section-title').each(function(){
@@ -79,7 +81,7 @@ $(function(){
     $('.effect').t({
         speed: 10,               // 文字の表示スピード。タイピングのスピード。
         speed_vary: true,         // 「true」にすると人間が入力しているかのように文字ごとのスピード。
-        delay: 0.3,                 // 開始時間。
+        delay: 1.5,                 // 開始時間。
         locale: 'en',             // キーボードのレイアウト「en」か「de」から選択。
         caret: true,     //カーソルの表示非表示、若しくはカーソル自体の指定。
         blink: false,             // カーソルを点滅させるかどうか。

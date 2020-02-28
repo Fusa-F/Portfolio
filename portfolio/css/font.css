@@ -1,11 +1,21 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Noto+Sans+JP&display=swap");
 html {
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6em;
-  font-family: 'Roboto','Noto Sans JP','ヒラギノ角ゴ Pro W3' sans-serif;
+  font-family: "Noto Sans JP";
+}
+
+a, .section-title {
+  font-family: "Kaushan Script";
+  letter-spacing: 2px;
+}
+
+#top {
+  font-family: "Kaushan Script";
+  letter-spacing: 10px;
 }
 
 footer .fab {

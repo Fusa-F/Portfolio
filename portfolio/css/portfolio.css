@@ -8,6 +8,16 @@
 #page {
   overflow: hidden;
   width: 100%;
+  display: none;
+}
+
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
 }
 
 .header-inner {
@@ -295,6 +305,7 @@ header .header-menu {
 #top .title h1 {
   font-size: 8rem;
   padding-left: 3rem;
+  z-index: 1;
 }
 
 @media (max-width: 1000px) {
@@ -410,17 +421,8 @@ header .header-menu {
           justify-content: center;
 }
 
-@media (max-width: 480px) {
-  #skills .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 #skills .container .contents {
-  width: 15rem;
+  width: 12rem;
   max-width: 100%;
   padding: 1rem;
   margin-right: 1rem;
@@ -428,7 +430,6 @@ header .header-menu {
 
 @media (max-width: 480px) {
   #skills .container .contents {
-    width: 70%;
     margin: 0 auto 3rem;
   }
 }
@@ -489,13 +490,19 @@ header .header-menu {
 #services .contents .txt {
   display: none;
   position: absolute;
-  top: 4%;
+  top: 3%;
   left: 0;
   padding: 2rem;
 }
 
 #services .contents .txt p {
   padding: 2rem;
+}
+
+@media (max-width: 480px) {
+  #services .contents .txt p {
+    padding: 0 2rem;
+  }
 }
 
 @media (max-width: 480px) {
