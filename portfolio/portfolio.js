@@ -81,29 +81,10 @@ $(function(){
     $('.effect').t({
         speed: 10,               // 文字の表示スピード。タイピングのスピード。
         speed_vary: true,         // 「true」にすると人間が入力しているかのように文字ごとのスピード。
-        delay: 1.5,                 // 開始時間。
+        delay: 0,                 // 開始時間。
         locale: 'en',             // キーボードのレイアウト「en」か「de」から選択。
         caret: true,     //カーソルの表示非表示、若しくはカーソル自体の指定。
         blink: false,             // カーソルを点滅させるかどうか。
     });
 
-    $('.slider').slick({
-        dots: true, //ページャーを表示（スライダー下の黒い丸）
-        autoplay: true, //自動で画像を切り替える
-        autoplaySpeed: 3000, //自動で画像が切り替えられるまでの時間 1000 = 1秒
-        speed: 1500,
-        adaptiveHeight: true,
-        swipeToSlide: true,
-        infinite: false,
-        responsive: [
-            {breakpoint: 701,
-                settings: {
-                }
-            },
-            {breakpoint: 501,
-                settings: {
-                }
-            }
-        ]
-    });
 });

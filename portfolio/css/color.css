@@ -298,6 +298,32 @@ body {
   color: white;
 }
 
+#works .img-box {
+  position: relative;
+}
+
+#works .img-box::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: '';
+  background: rgba(0, 27, 26, 0.192);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#works .img-box:hover::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
 #contact {
   color: white;
 }

@@ -511,14 +511,20 @@ header .header-menu {
   }
 }
 
-#works .slider {
+#works .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 6rem 3rem;
 }
 
-#works .slider .img-box img {
-  width: 100%;
+#works .container .img-box {
+  width: 30rem;
   height: auto;
-  margin: 0;
+}
+
+#works .container .img-box img {
+  width: 100%;
 }
 
 .background {

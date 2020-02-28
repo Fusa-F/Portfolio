@@ -246,6 +246,25 @@ body {
         background-color: $color-ax;
         color: $color-wt;
     }
+    .img-box {
+        position: relative;
+    }
+    .img-box::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        background: $color-clear;
+        transform-origin: bottom;
+        transform: scale(1, 0);
+        transition: all 0.2s ease;
+    }
+    .img-box:hover::before {
+        transform: scale(1, 1);
+    }
 }
 
 #contact {

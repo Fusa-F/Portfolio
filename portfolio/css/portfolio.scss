@@ -413,17 +413,20 @@ header {
 }
 
 #works {
-    .slider {
+    .container {
+        justify-content: center;
         padding: 6rem 3rem;
         .img-box {
+            width: 30rem;
+            height: auto;
             img {
                 width: 100%;
-                height: auto;
-                margin: 0;
             }
-        }    
+        }
     }
 }
+
+
 .background {
     height: 0;
 }
