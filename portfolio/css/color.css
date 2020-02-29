@@ -203,12 +203,6 @@ body {
   transition: all,transform 0.5s,-webkit-transform 0.5s;
 }
 
-#skills .contents:hover {
-  border: 1.5px solid #2A6B6D;
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-}
-
 #skills .contents::before {
   position: absolute;
   top: 0;
@@ -231,6 +225,7 @@ body {
 #skills .contents:hover::before {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
+  border: 1.5px solid #2A6B6D;
 }
 
 #services .img-box {
@@ -293,6 +288,21 @@ body {
           transform: scale(1, 1);
 }
 
+#works .container .contents-btn {
+  border-left: 1px solid #2A6B6D;
+}
+
+#works .container .contents-btn div {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#works .container .contents-btn div:hover {
+  color: white;
+  background-color: #2A6B6D;
+  border-radius: 20rem;
+}
+
 #works p {
   background-color: #2A6B6D;
   color: white;
@@ -300,6 +310,7 @@ body {
 
 #works .img-box {
   position: relative;
+  border: 1px solid #2A6B6D;
 }
 
 #works .img-box::before {
@@ -322,6 +333,21 @@ body {
 #works .img-box:hover::before {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
+}
+
+#works .img-box::after {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: inherit;
+  content: "";
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#works .img-box:hover::after {
+  color: #2A6B6D;
+  content: "CLICK";
 }
 
 #contact {

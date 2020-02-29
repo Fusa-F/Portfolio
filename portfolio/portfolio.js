@@ -27,6 +27,37 @@ $(function(){
         btnEvent(contents[5]);  
     });
 
+    var worksBtn=['#web-btn','#app-btn','#ill-btn','#all-btn'];
+    var worksContent=['.web','.app','.ill'];
+    function worksFadeIn(object){
+        var speed = 300;
+        $(object).fadeIn(speed);
+    }
+    function worksFadeOut(object,objectSec){
+        var speed = 300;
+        $(object).fadeOut(speed);
+        $(objectSec).fadeOut(speed);
+    }
+
+    $(worksBtn[0]).click(function(){
+        worksFadeIn(worksContent[0]);
+        worksFadeOut(worksContent[1],worksContent[2]);
+    });
+    $(worksBtn[1]).click(function(){
+        worksFadeIn(worksContent[1]);
+        worksFadeOut(worksContent[0],worksContent[2]);
+    });
+    $(worksBtn[2]).click(function(){
+        worksFadeIn(worksContent[2]);
+        worksFadeOut(worksContent[1],worksContent[0]);
+    });
+    $(worksBtn[3]).click(function(){
+        worksFadeIn(worksContent[0]);
+        worksFadeIn(worksContent[1]);
+        worksFadeIn(worksContent[2]);
+    });
+
+    
     $(window).scroll(function (){
         var scroll = $(window).scrollTop();
         var target = $(contents[i]).offset().top -70;

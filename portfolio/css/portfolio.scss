@@ -1,6 +1,4 @@
 @import url("./normalize.css");
-@import url("../slick/slick.css");
-@import url("../slick/slick-theme.css");
 @import url("./reset.css");
 @import url("./font.css");
 @import url("./color.css");
@@ -249,7 +247,7 @@ header {
     height: 100vh;
     padding-top: 10rem;
     .title {
-        width: 50%;
+        width: 60vw;
         max-width: 100%;
         margin: 4vh auto 0 4vw;
         padding: 5rem 3rem;
@@ -261,14 +259,14 @@ header {
             margin-left: 0;
         }
         h1 {
-            font-size: 8rem;
+            font-size: 10rem;
             padding-left: 3rem;
             z-index: 1;
             @include pc {
-                font-size: 6rem;
+                font-size: 8rem;
             }
             @include tab {
-                font-size: 4rem;
+                font-size: 6rem;
             }
         }
     }
@@ -345,10 +343,10 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         .contents {
-            width: 12rem;
+            width: 10rem;
             max-width: 100%;
             padding: 1rem;
-            margin-right: 1rem;
+            margin: 1rem;
             @include sp {
                 margin: 0 auto 3rem;
             }
@@ -414,14 +412,60 @@ header {
 
 #works {
     .container {
-        justify-content: center;
+        flex-flow: row-reverse;
         padding: 6rem 3rem;
-        .img-box {
-            width: 30rem;
-            height: auto;
-            img {
-                width: 100%;
+        @include pc {
+            flex-flow: row;
+            flex-direction: column;
+        }
+        @include tab {
+            padding: 6rem 1rem;
+        }
+        .contents-btn {
+            padding-left: 2rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            @include pc {
+                flex-direction: row;
+                justify-content: center;
+                border: none;
+                margin: 0 0 2rem 0;
             }
+            @include sp {
+                font-size: 1.3rem;
+            }
+            div {
+                padding: 2rem;
+                cursor: pointer;
+                display: inline-block;
+                @include sp {
+                    padding: 1rem;
+                }
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            .img-box {
+                width: 30rem;
+                height: 30rem;
+                margin: 0 0 1rem 1rem;
+                @include tab {
+                    width: 30vw;
+                    height: 30vw;
+                }
+                @include sp {
+                    width: 40vw;
+                    height: 40vw;
+                }
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }    
         }
     }
 }

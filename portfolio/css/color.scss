@@ -170,10 +170,6 @@ body {
     .contents {
         position: relative;
         transition: all,transform 0.5s;
-        &:hover {
-            border: 1.5px solid $color-ax;
-            transform: scale(1.03);
-        }
     }
     .contents::before {
         position: absolute;
@@ -190,6 +186,7 @@ body {
     }
     .contents:hover::before {
         transform: scale(1, 1);
+        border: 1.5px solid $color-ax;
     }
 }
 
@@ -242,12 +239,27 @@ body {
 }
 
 #works {
+    .container {
+        .contents-btn {
+            border-left: 1px solid $color-ax;
+            div {
+                transition: all 0.2s ease;
+                &:hover {
+                    color: $color-wt;
+                    background-color: $color-ax;
+                    border-radius: 20rem;
+
+                }    
+            }
+        }
+    }
     p {
         background-color: $color-ax;
         color: $color-wt;
     }
     .img-box {
         position: relative;
+        border: 1px solid $color-ax;
     }
     .img-box::before {
         position: absolute;
@@ -264,6 +276,18 @@ body {
     }
     .img-box:hover::before {
         transform: scale(1, 1);
+    }
+    .img-box::after {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        z-index: inherit;
+        content: "";
+        transition: all 0.2s ease;
+    }
+    .img-box:hover::after {
+        color: $color-ax;
+        content: "CLICK";
     }
 }
 
