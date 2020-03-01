@@ -145,6 +145,10 @@ header {
             bottom: 3rem;
             right: 3rem;
         }
+        &:hover {
+            -webkit-animation: fuwa 2s ease infinite;
+            animation: fuwa 2s ease infinite;
+        }
     }
 
     #nav-drawer {

@@ -172,6 +172,11 @@ header .top-btn img {
   }
 }
 
+header .top-btn:hover {
+  -webkit-animation: fuwa 2s ease infinite;
+  animation: fuwa 2s ease infinite;
+}
+
 header #nav-drawer {
   position: relative;
   padding: 2rem;
