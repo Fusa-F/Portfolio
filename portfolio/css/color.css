@@ -360,6 +360,12 @@ body {
   content: "CLICK";
 }
 
+.btn-hover {
+  color: white;
+  background-color: #2A6B6D;
+  border-radius: 20rem;
+}
+
 #contact {
   color: white;
 }

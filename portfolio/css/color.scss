@@ -257,7 +257,6 @@ body {
                     color: $color-wt;
                     background-color: $color-ax;
                     border-radius: 20rem;
-
                 }    
             }
         }
@@ -299,6 +298,12 @@ body {
         content: "CLICK";
     }
 }
+.btn-hover {
+    color: $color-wt;
+    background-color: $color-ax;
+    border-radius: 20rem;
+}
+
 
 #contact {
     color: $color-wt;
