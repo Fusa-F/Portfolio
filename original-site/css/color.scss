@@ -1,0 +1,257 @@
+$color-pink: rgba(255, 183, 183, 0.849);
+$color-pink-high: rgb(255, 183, 183);
+$color-orange: rgba(255, 190, 130, 0.842);
+$color-clear: rgba(252, 225, 252, 0.445);
+$color-wt: #fff;
+
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+header {
+    transition: all 0.1s ease-out;
+    &:hover {
+        transform: translateX(5rem);
+    }
+    
+    a {
+        color: $color-wt;
+    }
+    .btn {
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+    ul {
+        position: relative;
+        &:hover .btn {
+            opacity: 1;
+        }
+    }
+    ul::before {
+        width: 40rem;
+        height: 40rem;
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -15%;
+        left: -90%;
+        border-radius: 50%;
+        border: 2px solid $color-clear;
+        transition: all 1s ease;
+    }
+    ul:hover::before {
+        box-shadow: inset 0 0 700px 20px $color-pink-high;
+    }
+}
+
+#top {
+    .name {
+        color: $color-wt;
+        box-shadow: inset 0 0 500px 5px $color-pink;
+        span {
+            color: $color-pink-high;
+        }
+    }
+    .bg {
+        position: relative;
+        overflow: hidden;
+    }
+    .bg::before {
+        content: "";
+        position: absolute;
+        top: -30%;
+        left: -50%;
+        z-index: 1;
+        background-color: $color-pink-high;
+        box-shadow: inset 0 0 200px 50px $color-clear;
+        width: 100%;
+        height: 100%;
+        transform: rotate(135deg);
+    }
+    .bg::after {
+        content: "";
+        position: absolute;
+        bottom: -40%;
+        right: -50%;
+        z-index: 1;
+        background-color: $color-wt;
+        opacity: 0.3;
+        box-shadow: inset 0 0 200px 50px $color-pink;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-45deg);
+    }
+}
+
+#concept {
+    .img-box {
+        position: relative;
+    }
+    .img-box::before {
+        width: 100%;
+        height: 100%;
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-color: $color-pink;
+    }
+}
+
+#bg-shape {
+    position: relative;
+}
+#bg-shape::before {
+    width: 130vw;
+    height: 20vw;
+    content: "";
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: -10%;
+    background: linear-gradient(90deg,$color-wt, $color-clear, $color-pink, $color-pink-high);
+    transform: rotate(5deg);
+}
+
+#menu {
+    .container {
+        .slider {
+            position: relative;
+        }
+        .slider::before {
+            width: 100%;
+            height: 100%;
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            background-color: $color-pink;
+        }    
+        .slider::after {
+            width: 100%;
+            height: 100%;
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            background-color: $color-orange;
+        }    
+        .slider-txt {
+            .txt01 {
+                background-color: $color-clear;
+            }
+            .txt02 {
+                background-color: $color-orange;
+            }
+            .txt03 {
+                background-color: $color-pink;
+            }
+            .txt04 {
+                background-color: $color-clear;
+            }
+            .txt05 {
+                background-color: $color-orange;
+            }
+            .txt06 {
+                background-color: $color-pink;
+            }
+        }
+        .slick-prev:before,
+        .slick-next:before {
+            color: $color-pink-high;
+        }
+    }
+}
+
+#view {
+    .lg {
+        position: relative;
+    }
+    .lg::before {
+        width: 130vw;
+        height: 20vw;
+        content: "";
+        z-index: -10;
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        background: linear-gradient(90deg,$color-wt, $color-clear, $color-pink, $color-pink-high);
+        transform: rotate(170deg);
+    }
+    .lg::after {
+        width: 130vw;
+        height: 20vw;
+        content: "";
+        z-index: -10;
+        position: absolute;
+        bottom: -130%;
+        left: -10%;
+        background: linear-gradient(90deg,$color-clear, $color-pink, $color-pink-high);
+        transform: rotate(15deg);
+    }
+}
+
+#reserve {
+    a {
+        color: $color-pink-high;
+        border: 3px solid $color-pink-high;
+        transition: all 0.2s ease;
+        &:hover {
+            color: $color-wt;
+            background-color: $color-pink-high;
+        }
+    }
+}
+
+#bg-shape02 {
+    position: relative;
+}
+#bg-shape02::before {
+    width: 130vw;
+    height: 20vw;
+    content: "";
+    z-index: -10;
+    position: absolute;
+    top: -100%;
+    left: -10%;
+    background: linear-gradient(270deg,$color-clear, $color-pink, $color-pink-high);
+    transform: rotate(-10deg);
+}
+
+
+footer {
+    background-color: $color-clear;
+    a {
+        background-color: $color-wt;
+        transition: all 0.2s ease;
+        &:hover {
+            background-color: $color-pink-high;
+            .fab {
+                color: $color-wt;
+            }
+        }
+        .fab {
+            color: $color-pink-high;
+            transition: all 0.2s ease;
+        }
+    }
+}
